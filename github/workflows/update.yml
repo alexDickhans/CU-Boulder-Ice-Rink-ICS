@@ -1,0 +1,35 @@
+name: Update Skating Calendars
+
+on:
+  schedule:
+    - cron: '0 6 * * *' # Daily at 6am UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: pip install requests ics
+
+      - name: Run Scraper
+        run: python fetch_skate_split.py
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          # Add all .ics files created by the script
+          git add *.ics
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Update calendars [skip ci]" && git push)
