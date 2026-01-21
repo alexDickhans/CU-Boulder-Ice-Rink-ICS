@@ -24,7 +24,7 @@ jobs:
         run: pip install requests ics
 
       - name: Run Scraper
-        run: python fetch_skate_split.py
+        run: python main.py
 
       - name: Commit and Push
         run: |
