@@ -2,7 +2,7 @@
 
 This project automatically scrapes the [CU Boulder EMS schedule](https://ems.colorado.edu/CustomBrowseEvents.aspx) and generates synchronized `.ics` files. This allows you to see Rec Skate and Club times directly in your personal calendar without checking the website manually.
 
-## 📅 Subscription Links
+## 📅 Subscription Links ![Update Status](https://github.com/alexDickhans/CU-Boulder-Ice-Rink-ICS/actions/workflows/update.yml/badge.svg)
 
 **Important:** Do not download the files. Instead, **right-click** the links below and select **"Copy Link Address"** to use in the subscription steps below.
 

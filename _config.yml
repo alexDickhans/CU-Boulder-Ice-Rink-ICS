@@ -1,0 +1,13 @@
+title: CU Boulder Skating Schedules
+description: Automated ICS feeds for Rec Center ice rink events.
+url: "https://skating.dickhans.net" # Your custom domain
+author:
+  name: Alex Dickhans
+exclude:
+  - fetch_skate_auto.py
+  - requirements.txt
+  - .github/
+  - .gitignore
+permalink: pretty
+theme: minima # Or 'jekyll-theme-cayman', 'jekyll-theme-merlot', etc.
+favicon_path: "favicon.ico"
